@@ -1,0 +1,10 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: CoNaIISI 2016
+  host: CoNaIISI-2016
+  disk_quota: 1024M
+  services:
+  - CoNaIISI 2016-personality_insights

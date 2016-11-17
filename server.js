@@ -5,13 +5,11 @@ var fs = require('fs');
 
 var nodemailer = require('nodemailer');
 var mandrillTransport = require('nodemailer-mandrill-transport');
-// node variable
-var dotenv  = require('dotenv').config();
 
 // Start Server
 var app = express();
 // var router = express.Router();
-var port = process.env.PORT || 3000 ;
+var port =  3000 ;
 // Public path configuration
 app.use(express.static(__dirname + '/App'));
 
