@@ -1,0 +1,57 @@
+
+<div class="showing">
+
+  <div class="start text-center">
+
+    <p ng-show="isCurrent(key)" ng-repeat="(key, slide) in slides">
+      <img ng-class="effect" class="ppt" src="{{ slide.src }}" alt=""/>
+    </p>
+
+  </div>
+
+
+  <div class="footer">
+
+  	<a ng-click="prev()" class="waves-effect waves-light btn"><i class="material-icons left rotate">play_arrow</i>Anterior</a>
+
+  	<a ng-click="next()" class="waves-effect waves-light btn"  ><i class="material-icons right">play_arrow</i>{{ btn.text }}</a>
+
+  </div>
+
+</div>
+
+<div class="col-sm-12 col-xs-12 hidden-md hidden-xl">
+    <!--<div class="carousel">-->
+        <!--<a class="carousel-item" href="#one!"><img src="http://lorempixel.com/250/250/nature/1"></a>-->
+        <!--<a class="carousel-item" href="#two!"><img src="http://lorempixel.com/250/250/nature/2"></a>-->
+        <!--<a class="carousel-item" href="#three!"><img src="http://lorempixel.com/250/250/nature/3"></a>-->
+        <!--<a class="carousel-item" href="#four!"><img src="http://lorempixel.com/250/250/nature/4"></a>-->
+        <!--<a class="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/nature/5"></a>-->
+    <!--</div>-->
+
+    <!--<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">-->
+        <!--&lt;!&ndash; Indicators &ndash;&gt;-->
+        <!--<ol class="carousel-indicators">-->
+            <!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
+            <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
+            <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+        <!--</ol>-->
+
+        <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
+        <!--<div class="carousel-inner" role="listbox">-->
+            <!--<div ng-repeat="(key, slide) in slides" class="item" style="line-height: 100vh;" ng-class="key === 0 ? 'active' : ''">-->
+                <!--<p><img src="{{ slide.src }}" alt="..."></p>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; Controls &ndash;&gt;-->
+        <!--<a class="left carousel-control" href="/#/start#carousel-example-generic" role="button" data-slide="prev">-->
+            <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+            <!--<span class="sr-only">Previous</span>-->
+        <!--</a>-->
+        <!--<a class="right carousel-control" href="/#/start#carousel-example-generic" role="button" data-slide="next">-->
+            <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+            <!--<span class="sr-only">Next</span>-->
+        <!--</a>-->
+    <!--</div>-->
+</div>

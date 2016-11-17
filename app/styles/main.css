@@ -1,0 +1,181 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+.card-image {
+  height: 200px; }
+
+.down {
+  font-size: 3em;
+  margin-top: 35px;
+  color: #333333; }
+
+nav ul a,
+nav .brand-logo {
+  color: #444; }
+
+p {
+  line-height: 2rem; }
+
+.button-collapse {
+  color: #26a69a; }
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, 0.9); }
+
+.parallax-container .section {
+  width: 100%; }
+
+@media only screen and (max-width: 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%; }
+
+  #index-banner .section {
+    top: 10%; } }
+@media only screen and (max-width: 600px) {
+  #index-banner .section {
+    top: 0; } }
+.icon-block {
+  padding: 0 15px; }
+
+.icon-block .material-icons {
+  font-size: inherit; }
+
+footer.page-footer {
+  margin: 0; }
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+body {
+  padding: 0; }
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+  /* Make the masthead heading the same height as the navigation */ }
+  .header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px; }
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5; }
+
+.container-narrow > hr {
+  margin: 30px 0; }
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5; }
+  .jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px; }
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0; }
+  .marketing p + h4 {
+    margin-top: 28px; }
+
+.loading p {
+  line-height: 100vh; }
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px; }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0; }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px; }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0; } }
+.step1 {
+  height: 100vh; }
+  .step1 .btn {
+    height: 30vh; }
+
+.rn-carousel-control {
+  display: none !important; }
+
+.start {
+  height: 100vh; }
+  .start .ppt {
+    width: 80%; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
+  left: 0;
+  text-align: center; }
+  .footer .rotate {
+    -ms-transform: rotate(180deg);
+    /* IE 9 */
+    -webkit-transform: rotate(180deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(180deg); }
+
+.form-view {
+  padding-top: 5%; }
+  .form-view .form {
+    margin-bottom: 5%; }
+
+.blog nav {
+  background-color: #72112B;
+  color: #fff;
+  text-align: center; }
+  .blog nav h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 60px; }
+.blog .new-post {
+  position: fixed;
+  bottom: 10px;
+  right: 15px; }
+.blog .card-content {
+  border-bottom: 3px solid #90a4ae; }
+.blog .comments .card-content {
+  border-bottom: none !important;
+  border-top: 1px solid #90a4ae; }
+.blog .actions i {
+  font-size: 2rem; }
+.blog .actions .right {
+  float: right; }
+
+/*# sourceMappingURL=main.css.map */

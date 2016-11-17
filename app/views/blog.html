@@ -1,0 +1,90 @@
+
+<div class="blog">
+  <nav class="text-center">
+      <h3>UAI BLOG</h3>
+  </nav>
+
+    <div class="col-md-3">
+      <div class="collection">
+        <a href="#!" class="collection-item">Ultimas</a>
+        <a href="#!" class="collection-item active">Mejor valoradas</a>
+        <a href="#!" class="collection-item">Con mas comentarios</a>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card horizontal" ng-repeat="post in postsdb | orderBy : '-ranking' ">
+        <div class="card-stacked">
+          <div class="card-content">
+            <h5>{{post.text}}</h5>
+          </div>
+          <div class="comments text-center">
+            <!--<span ng-show="post.comments.length" class="light-blue-text text-lighten-1">comentarios</span>-->
+            <div class="card-content text-left" ng-repeat="com in post.comments">
+              <p>{{com.text}}</p>
+            </div>
+          </div>
+
+          <div class="card-action" style="display:flex;align-items:center;">
+            <div class="input-field col-md-8">
+              <input id="email" ng-model="post.comment" type="text" class="validate">
+              <label for="email">Comentario..</label>
+            </div>
+            <a class="col-md-2" ng-click="createComment(post.$id, post.comment)">Enviar</a>
+            <div class="col-md-2 actions">
+              <i ng-click="addRanking(post.$id)" class="fa fa-thumbs-up green-text text-lighten-2" aria-hidden="true"></i>
+              <i ng-click="downRanking(post.$id)" class="fa fa-thumbs-down right red-text text-darken-2" aria-hidden="true"></i>
+            </div>
+
+              <div class="chip">
+                  {{ post.ranking }}
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3"></div>
+
+    <a class="btn-floating btn-large waves-effect waves-light red new-post" data-toggle="modal" data-target="#myModal"><i class="material-icons">add</i></a>
+
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" style="background: transparent;box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0), 0 25px 55px 0 rgba(0, 0, 0, 0.0);overflow: hidden;" tabindex="-1" data-show="false" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body" style="overflow: hidden;">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" ng-model="post.user" type="text" class="validate">
+              <label for="first_name">Nombre</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="textarea1" ng-model="post.text" class="materialize-textarea"></textarea>
+              <label for="textarea1">Post..</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" ng-click="createPost(post)" class="btn btn-default" data-dismiss="modal">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('#myModal').modal()
+  });
+  </script>

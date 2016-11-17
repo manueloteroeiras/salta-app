@@ -1,0 +1,35 @@
+<div class="loading text-center" ng-show="loading">
+    <p><img src="images/uai.png" class="loagingImg" ng-style="myLoadingImage" alt="" /></p>
+</div>
+
+<div class="form-view" ng-show="!loading">
+    <div class="col-md-6 col-md-offset-3 z-depth-5 form">
+
+	    <form role="form" data-toggle="validator">
+        <div class="row text-center">
+          <h5>CoNaIISI 2016 – UCASAL</br> Jueves 17 de noviembre 2016</h5>
+        </div>
+
+
+        <div class="row">
+          <p>
+            <!-- La Estructura de los Artículos Científicos -->
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" ng-model="sendData.mail" ng-change="chekBloqued()" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+      	<div class="row text-center">
+      		<a ng-click="goToStart()" ng-disabled="bloqued" class="btn">Continuar</a>
+      	</div>
+
+
+	    </form>
+
+    </div>
+</div>

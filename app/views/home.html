@@ -1,0 +1,39 @@
+<div class="form-view">
+    <div class="col-md-6 col-md-offset-3 z-depth-5 form">
+
+	    <form>
+
+  			<div class="row text-center">
+  				<h3>{{ current.titulo }}</h3>
+  			</div>
+  			<div class="row" ng-repeat="q in current.questions">
+
+  				<div ng-show="q.multiple" >
+  					<div class="input-field col s12">
+  					  	<h5 for="first_name">{{ q.pregunta }}</h5>
+  					  	<p ng-repeat="(key, option) in q.options" >
+  					      	<input name="group-{{ getSlug(q.pregunta) }}" ng-click="respond(q.category, option.name)" type="radio" id="test-{{ getSlug(q.pregunta) }}-{{ key }}" />
+  					      	<label for="test-{{ getSlug(q.pregunta) }}-{{ key }}">{{ option.name }}</label>
+  					    </p>
+  					</div>
+  				</div>
+
+  				<div ng-show="!q.multiple" >
+  					<h5 for="first_name">{{ q.pregunta }}</h5>
+  					<div class="input-field col s12">
+  					  	<textarea id="textarea1" ng-model="answer.observaciones" class="materialize-textarea"></textarea>
+            		<label for="textarea1">Respuesta</label>
+  					</div>
+  				</div>
+
+  			</div>
+
+      	<div class="row text-center">
+      		<a ng-click="confirmation()" class="btn">Enviar</a>
+      	</div>
+
+
+	    </form>
+
+    </div>
+</div>

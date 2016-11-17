@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>SlideShare</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css" />
+    <link rel="stylesheet" href="bower_components/angular-carousel/dist/angular-carousel.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="angularFireApp" ng-controller="HomeCtrl">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- <nav style="background-color: #72112B">
+        <p><img src="images/logo.png" alt="" height="100" /></p>
+    </nav> -->
+
+    <ul id="slide-out" class="side-nav blue-grey darken-3" ng-hide="navLogin">
+        <img class="background" src="images/banner.png" style="width: 100%">
+        <li class="text-center">
+          <a href="#!user"><img class="circle" src="images/person.png" style="height: 80px;margin-top: -50px;"></a>
+          <!-- <a href="#!name"><span class="white-text name"></span></a>
+          <a href="#!email"><span class="white-text email"></span></a> -->
+        </li>
+        <li><a class="subheader">Virtualeetow</a></li>
+        <li><a class="white-text" href="#/students">Students</a></li>
+        <li><a class="white-text" href="#/files">Files</a></li>
+        <li><a class="white-text" href="#/video">Videos</a></li>
+        <li><a class="white-text" href="#/sessions">Sessions</a></li>
+        <li><a class="subheader"></a></li>
+        <li><a class="white-text" href="#!">Cerrar Sesion</a></li>
+        <li></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"></a>
+
+    <div ng-view=""></div>
+
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/materialize/bin/materialize.js"></script>
+    <script src="bower_components/angular-carousel/dist/angular-carousel.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/chart.js/2.2.1/Chart.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/angular.chartjs/1.0.3/angular-chart.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/angular.chartjs/1.0.3/angular-chart.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/angular.chartjs/1.0.3/angular-chart.min.js.map"></script> -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+
+    <script>
+          // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyD30wbd5RnU7D7kmMZ1cCmL8RRryyccERQ",
+          authDomain: "uai-registro.firebaseapp.com",
+          databaseURL: "https://uai-registro.firebaseio.com",
+          storageBucket: "uai-registro.appspot.com",
+          messagingSenderId: "151225139509"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <script>
+
+       $('.button-collapse').sideNav({
+          menuWidth: 300, // Default is 240
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        }
+    );
+
+     $("#menuBtn").click(function () {
+         $('.button-collapse').sideNav('show');
+     })
+
+
+    </script>
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/angularfire/config.js"></script>
+        <script src="scripts/angularfire/firebase.ref.js"></script>
+        <script src="scripts/filters/reverse.js"></script>
+        <script src="scripts/angularfire/auth.js"></script>
+        <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/admin.js"></script>
+        <script src="scripts/controllers/blog.js"></script>
+        <script src="scripts/directives/ngShowAuth.js"></script>
+        <script src="scripts/directives/ngHideAuth.js"></script>
+        <script src="scripts/directives/getFile.js"></script>
+        <script src="scripts/routes.js"></script>
+        <!-- endbuild -->
+
+        <script type="text/javascript">
+         $(document).ready(function(){
+//               $('.carousel').carousel();
+            $('.carousel').carousel({full_width: true});
+            $('.collapsible').collapsible();
+
+            $('.modal-trigger').leanModal();
+
+
+        });
+        </script>
+
+</body>
+</html>
